@@ -3,26 +3,40 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Stencyl Arcade</title>
-    <meta name="description" content="Stencyl Arcade" />
+    <title>swf-arcade</title>
+    <meta name="description" content="swf-arcade" />
     <meta name="author" content="DMA Summer Institute 2016" />
-    <meta name="keywords" content="stencyl arcade games dma summer institute 2016">
+    <meta name="keywords" content="flash games arcade dma summer institute 2016">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!--- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <!--- data object -->
+    <script type="text/javascript" src="js/students.js"></script>
+    <!--- main -->
+    <script type="text/javascript" src="js/arcade.js"></script>
 </head>
 
 <body>
+    <h3 class="game__title"></h3>
     <div class="game__container">
-        <object id="game" type="application/x-shockwave-flash" data="swf/fast-walker.swf" width="1000" height="750">
+        <object id="game" class="inactive" name="game" type="application/x-shockwave-flash" data="swf/fast-walker.swf" width="1000" height="750">
             <param name="movie" value="swf/fast-walker.swf" />
             <param name="quality" value="autohigh" />
         </object>
     </div>
     <div class="control__container">
-        <a class="control control__next-game" href="#">Next Game</a>
+        <a class="control control--sml control__prev-game" href="#"><</a>
+        <a class="control control--lrg control__home" href="students.html">home</a>
+        <div class="control control__counter"></div>
+        <a class="control control--lrg control__reload-game" href="#">reload</a>
+        <a class="control control--sml control__next-game" href="#">></a>
     </div>
+    <div class="alert__container">
+        <div class="game__alert">
+            <h1>click to play</h1>
+        </div>
+    </div>
+
 </body>
 
 </html>
