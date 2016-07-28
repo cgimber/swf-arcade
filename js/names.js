@@ -13,13 +13,10 @@ $(document).ready(function() {
         // check the current group
         if (i === 0 || students[i].group !== students[i-1].group)
             divider = ('<h3 class="students__divider"> group ' + students[i].group + '</h3>');
-        // else {
-        //     divider = ('<br>');
-        // }
 
         // add a link to their game ID
-        var name = students[i].firstname + ' ' + students[i].lastname;
-        var link = ('<a class="students__link" href="/#' + i + '">' + name + '</a>');
+        var fullName = students[i].firstname + ' ' + students[i].lastname;
+        var link = ('<a class="students__link" href="/#' + i + '">' + fullName + '</a>');
 
         $('.students').append(divider, link);
     }

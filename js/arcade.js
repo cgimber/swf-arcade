@@ -32,6 +32,7 @@ function checkHash() {
 function updatePage() {
     // update the DOM for the current student
     var currStudent = students[numStudent];
+    var fullName = currStudent.firstname + ' ' + currStudent.lastname;
     var pathToGame = 'swf/' + currStudent.firstname + '-' + currStudent.lastname + '.swf';
 
     // game
@@ -40,8 +41,11 @@ function updatePage() {
         .height(currStudent.height)
         .show();
     $('#game').replaceWith("<object id='game' name='game' type='application/x-shockwave-flash' data='" + pathToGame + "' width='" + currStudent.width + "' height='" + currStudent.height + "'> < param name = 'movie' value = '" + pathToGame + "'/> <param name = 'quality' value = 'autohigh' / > </object>");
-    $('.game__title').text(currStudent.firstname + ' ' + currStudent.lastname);
+    $('.game__title').text(fullName);
     watchSwf($('#game'));
+
+    // document
+    document.title = 'swf-arcade - ' + fullName;
 
     // links
     if (numStudent > 0)
