@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,66 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.students {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.students__divider {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.students__link {
+    padding: 0.5em 0;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.students__link:hover {
+    animation: pulseColor 1s linear infinite;
+}
+
+.game__title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    top: 0.5em;
+    z-index: 999;
+}
+
+.alert__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.game__alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    color: black;
 }
 
 .game__container {
@@ -23,12 +85,68 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    bottom: 0;
+    bottom: 0.5em;
     z-index: 999;
 }
 
 .control {
+    margin: 0 0.5em;
     padding: 0.5em;
     background-color: white;
     text-align: center;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.control__counter {
+    display: none;
+}
+
+.control--lrg {
+    min-width: 7.5em;
+}
+
+.control--sml {
+    min-width: 2em;
+}
+
+a.control:active {
+    transform: translateX(1px) translateY(1px) ;
+}
+
+@keyframes pulseColor {
+  0% {
+    color: hsl(0, 100%, 50%);
+  }
+  25% {
+    color: hsl(90, 100%, 50%);
+  }
+  50% {
+    color: hsl(180, 100%, 50%);
+  }
+  75% {
+    color: hsl(270, 100%, 50%);
+  }
+  100% {
+    color: hsl(360, 100%, 50%);
+  }
+}
+
+@keyframes pulseBG {
+  0% {
+    background: hsl(0, 100%, 50%);
+  }
+  25% {
+    background: hsl(90, 100%, 50%);
+  }
+  50% {
+    background: hsl(180, 100%, 50%);
+  }
+  75% {
+    background: hsl(270, 100%, 50%);
+  }
+  100% {
+    background: hsl(360, 100%, 50%);
+  }
 }

@@ -3,26 +3,58 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Stencyl Arcade</title>
-    <meta name="description" content="Stencyl Arcade" />
+    <title>swf-arcade</title>
+    <meta name="description" content="80 flash games from UCLA DMA Summer Institute 2016" />
     <meta name="author" content="DMA Summer Institute 2016" />
-    <meta name="keywords" content="stencyl arcade games dma summer institute 2016">
+    <meta name="keywords" content="flash game design arcade dma summer institute 2016">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!--- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--- data object -->
+    <script type="text/javascript" src="js/students.js"></script>
+    <!--- main -->
+    <script type="text/javascript" src="js/arcade.js"></script>
 </head>
 
 <body>
+    <h3 class="game__title"></h3>
     <div class="game__container">
-        <object id="game" type="application/x-shockwave-flash" data="swf/fast-walker.swf" width="1000" height="750">
-            <param name="movie" value="swf/fast-walker.swf" />
+        <object id="game" class="inactive" name="game" type="application/x-shockwave-flash" data="swf/alicia-zhang.swf" width="640" height="384">
+            <param name="movie" value="swf/alicia-zhang.swf" />
             <param name="quality" value="autohigh" />
         </object>
     </div>
     <div class="control__container">
-        <a class="control control__next-game" href="#">Next Game</a>
+        <a class="control control--sml control__prev-game" href="#"><</a>
+        <a class="control control--lrg control__home" href="students.html">home</a>
+        <div class="control control__counter"></div>
+        <a class="control control--lrg control__reload-game" href="#">reload</a>
+        <a class="control control--sml control__next-game" href="#">></a>
     </div>
+    <div class="alert__container">
+        <div class="game__alert">
+            <h1>click to play</h1>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-61305502-3', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
 
 </html>
