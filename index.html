@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!--- jQuery -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--- SWFObject -->
+    <script type="text/javascript" src="js/vendor/swfobject.js"></script>
     <!--- data object -->
     <script type="text/javascript" src="js/students.js"></script>
     <!--- main -->
@@ -20,10 +22,7 @@
 <body>
     <h3 class="game__title"></h3>
     <div class="game__container">
-        <object id="game" class="inactive" name="game" type="application/x-shockwave-flash" data="swf/alicia-zhang.swf" width="640" height="384">
-            <param name="movie" value="swf/alicia-zhang.swf" />
-            <param name="quality" value="autohigh" />
-        </object>
+        <div id="game"></div>
     </div>
     <div class="control__container">
         <a class="control control--sml control__prev-game" href="#"><</a>
@@ -34,7 +33,9 @@
     </div>
     <div class="alert__container">
         <div class="game__alert">
-            <h1>click to play</h1>
+            <h1 class="game__alert--loading">loading</h1>
+            <h1 class="game__alert--click">click to play</h1>
+            <h1 class="game__alert--error">if ur reading this rn<br>your browser doesn't support flash<br>:(</h1>
         </div>
     </div>
 
