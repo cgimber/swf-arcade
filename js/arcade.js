@@ -57,7 +57,7 @@ function updatePage() {
                         e.ref.focus();
                         $('.game__alert--loading').hide();
                         $('.game__alert--click').show();
-                        $('.game__alert').fadeOut('1000');
+                        $('.alert__container').fadeOut('1000');
                         clearInterval(loadCheckInterval);
                     } else {
                         // animate loading dots
@@ -69,7 +69,7 @@ function updatePage() {
             } else {
                 $('.game__alert--loading').hide();
                 $('.game__alert--click').show();
-                $('.game__alert').fadeOut('1000');
+                $('.alert__container').fadeOut('1000');
                 clearInterval(loadCheckInterval);
             }
         }, 200);
@@ -79,6 +79,7 @@ function updatePage() {
         clearInterval(loadCheckInterval);
     
     // game
+    $('.alert__container').show();
     $('.game__alert')
         .width(currStudent.width)
         .height(currStudent.height)
