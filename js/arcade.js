@@ -115,6 +115,7 @@ function updatePage() {
 
     // links
     $('.control__prev-game').prop('href', '#' + numPrev);
+    $('.control__reload-game').prop('href', '#' + numStudent);
     $('.control__next-game').prop('href', '#' + numNext);
 
     // counter
