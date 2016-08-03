@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
-
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +10,11 @@ body {
     color: white;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 24px;
+}
+
+html.isMobile .game__title,
+html.isMobile .control__container {
+    display: none;
 }
 
 .students {
@@ -33,6 +37,7 @@ body {
     position: relative;
     display: inline-block;
     text-align: center;
+    line-height: 1.33;
     color: white;
     font-weight: bold;
 }
@@ -68,16 +73,17 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    line-height: 1.25;
     background: white;
     color: black;
 }
 
 .game__alert--click {
-  display: none;
+    display: none;
 }
 
 .game__alert--error {
-  display: none;
+    display: none;
 }
 
 .game__container {
@@ -121,41 +127,41 @@ body {
 }
 
 a.control:active {
-    transform: translateX(1px) translateY(1px) ;
+    transform: translateX(1px) translateY(1px);
 }
 
 @keyframes pulseColor {
-  0% {
-    color: hsl(0, 100%, 50%);
-  }
-  25% {
-    color: hsl(90, 100%, 50%);
-  }
-  50% {
-    color: hsl(180, 100%, 50%);
-  }
-  75% {
-    color: hsl(270, 100%, 50%);
-  }
-  100% {
-    color: hsl(360, 100%, 50%);
-  }
+    0% {
+        color: hsl(0, 100%, 50%);
+    }
+    25% {
+        color: hsl(90, 100%, 50%);
+    }
+    50% {
+        color: hsl(180, 100%, 50%);
+    }
+    75% {
+        color: hsl(270, 100%, 50%);
+    }
+    100% {
+        color: hsl(360, 100%, 50%);
+    }
 }
 
 @keyframes pulseBG {
-  0% {
-    background: hsl(0, 100%, 50%);
-  }
-  25% {
-    background: hsl(90, 100%, 50%);
-  }
-  50% {
-    background: hsl(180, 100%, 50%);
-  }
-  75% {
-    background: hsl(270, 100%, 50%);
-  }
-  100% {
-    background: hsl(360, 100%, 50%);
-  }
+    0% {
+        background: hsl(0, 100%, 50%);
+    }
+    25% {
+        background: hsl(90, 100%, 50%);
+    }
+    50% {
+        background: hsl(180, 100%, 50%);
+    }
+    75% {
+        background: hsl(270, 100%, 50%);
+    }
+    100% {
+        background: hsl(360, 100%, 50%);
+    }
 }
