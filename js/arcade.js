@@ -51,8 +51,8 @@ function updatePage() {
         if (!e.success || !e.ref) {
             $('.game__alert--loading').hide();
             $('.game__alert')
-                .width('100vw')
-                .height('100vh');
+                .width('auto')
+                .height('auto');
             $('.game__alert--error').show();
             return false;
         }
